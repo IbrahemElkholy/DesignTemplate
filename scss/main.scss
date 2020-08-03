@@ -131,3 +131,32 @@ header{
         @extend .button
     }
 }
+
+.service {
+    text-align: center;
+    padding: 2rem 0;
+    background: #fffcfc;
+    h2 {
+        @extend.h2;
+        color:#121213
+    }
+    span {
+        @extend.span;
+        color:#363638;
+    }
+    .item {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 15px;
+        margin: 1.5rem 0;
+        i {
+            color: $primaryColor;
+        }
+        h3 {
+            margin: 1.5rem 0;
+        }
+        p {
+            color:#5f4747;
+        }
+    }
+}

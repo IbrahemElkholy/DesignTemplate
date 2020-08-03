@@ -36,11 +36,11 @@ header {
   width: 50%;
   float: left; }
 
-.h2, .home .home-content h2, .needs h2 {
+.h2, .home .home-content h2, .needs h2, .service h2 {
   font-size: 2rem;
   color: #fcf9f7; }
 
-.span, .home .home-content span, .needs span {
+.span, .home .home-content span, .needs span, .service span {
   display: block;
   margin: 1rem auto;
   width: 35px;
@@ -81,3 +81,23 @@ header {
   padding: 2rem 0;
   background: #121213;
   text-align: center; }
+
+.service {
+  text-align: center;
+  padding: 2rem 0;
+  background: #fffcfc; }
+  .service h2 {
+    color: #121213; }
+  .service span {
+    color: #363638; }
+  .service .item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 1.5rem 0; }
+    .service .item i {
+      color: rgba(241, 122, 24, 0.911); }
+    .service .item h3 {
+      margin: 1.5rem 0; }
+    .service .item p {
+      color: #5f4747; }
