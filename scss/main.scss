@@ -26,6 +26,11 @@ header{
     position: fixed;
     width: 100%;
     z-index: 999;
+    background: #121213;
+    i {
+        float: left;
+        margin-right: 0.5rem;
+    }
     .logo{
         @extend .w-f;
         color: #d8d3d3;
@@ -157,6 +162,73 @@ header{
         }
         p {
             color:#5f4747;
+        }
+    }
+}
+
+// images section 
+.images {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    > div {
+        position: relative;
+        font-size: 0;
+        img{
+            width: 100%;
+            height: 15rem;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($primaryColor,0.6);
+            opacity: 0;
+            @include trans;
+        }
+        &:hover {
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// download section 
+.download-content{
+    padding: 1.5rem 0;
+    text-align: center;
+    background: #121213;
+    h2 {
+        @extend .h2;
+        padding: 1.5rem 0;
+    }
+    button {
+        @extend .button;
+    }
+}
+
+.contact {
+    text-align: center;
+    padding: 1.5rem 0;
+    h2 {
+        @extend .h2;
+        color:#121213;
+    }
+    >span {
+        @extend .span
+    }
+    .getin-touch{
+        display: flex;
+        justify-content: center;
+        .item{
+            margin: 1rem 1.5rem;
+            i{
+                display: block;
+                color: $primaryColor;
+            }
         }
     }
 }

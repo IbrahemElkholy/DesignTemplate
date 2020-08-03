@@ -15,7 +15,11 @@ header {
   padding: 10px;
   position: fixed;
   width: 100%;
-  z-index: 999; }
+  z-index: 999;
+  background: #121213; }
+  header i {
+    float: left;
+    margin-right: 0.5rem; }
   header .logo {
     color: #d8d3d3; }
   header ul {
@@ -36,11 +40,11 @@ header {
   width: 50%;
   float: left; }
 
-.h2, .home .home-content h2, .needs h2, .service h2 {
+.h2, .home .home-content h2, .needs h2, .service h2, .download-content h2, .contact h2 {
   font-size: 2rem;
   color: #fcf9f7; }
 
-.span, .home .home-content span, .needs span, .service span {
+.span, .home .home-content span, .needs span, .service span, .contact > span {
   display: block;
   margin: 1rem auto;
   width: 35px;
@@ -52,7 +56,7 @@ header {
   letter-spacing: 3px;
   color: #dfd5d5; }
 
-.button, .home .home-content button, .needs button {
+.button, .home .home-content button, .needs button, .download-content button {
   background: rgba(241, 122, 24, 0.911);
   border-radius: 15px;
   border: 0;
@@ -61,7 +65,7 @@ header {
   text-transform: uppercase;
   padding: 10px 20px;
   transition: all 0.5s ease-in-out; }
-  .button:hover, .home .home-content button:hover, .needs button:hover {
+  .button:hover, .home .home-content button:hover, .needs button:hover, .download-content button:hover {
     background: #fcf9f7;
     color: rgba(241, 122, 24, 0.911); }
 
@@ -101,3 +105,46 @@ header {
       margin: 1.5rem 0; }
     .service .item p {
       color: #5f4747; }
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  .images > div {
+    position: relative;
+    font-size: 0; }
+    .images > div img {
+      width: 100%;
+      height: 15rem; }
+    .images > div:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(241, 122, 24, 0.6);
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+    .images > div:hover:after {
+      opacity: 1; }
+
+.download-content {
+  padding: 1.5rem 0;
+  text-align: center;
+  background: #121213; }
+  .download-content h2 {
+    padding: 1.5rem 0; }
+
+.contact {
+  text-align: center;
+  padding: 1.5rem 0; }
+  .contact h2 {
+    color: #121213; }
+  .contact .getin-touch {
+    display: flex;
+    justify-content: center; }
+    .contact .getin-touch .item {
+      margin: 1rem 1.5rem; }
+      .contact .getin-touch .item i {
+        display: block;
+        color: rgba(241, 122, 24, 0.911); }
