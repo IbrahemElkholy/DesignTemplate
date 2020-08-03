@@ -1,7 +1,8 @@
 
  
 $primaryColor:rgba(241, 122, 24, 0.911);
-$secondaryColor:rgb(52, 8, 104) ;
+$secondaryColor:rgb(243, 241, 245) ;
+$Home_bg:url("../img/home.jpg");
 
 @mixin trans {
     transition: all 0.5s ease-in-out;
@@ -22,9 +23,12 @@ body{
 header{
     overflow: hidden;
     padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     .logo{
         @extend .w-f;
-        color: green($color: #d8d3d3);
+        color: #d8d3d3;
         
     }
     ul{
@@ -35,7 +39,7 @@ header{
             padding: 10px;
             a{
                 text-decoration: none;
-                color: green($color: #d8d3d3);
+                color: #d8d3d3;
                 font-weight: bold;
                 text-transform: uppercase;
                 @include trans;
@@ -47,12 +51,83 @@ header{
     }
 }
 
+// extend classes
 .w-f{
     width: 50%;
     float: left;
 }
-
-section{
-    width: 85%;
-    margin: auto;
+.h2{
+    font-size: 2rem;
+           color: #fcf9f7;
+}
+.span{
+    display: block;
+    margin: 1rem auto;
+    width: 35px;
+    height: 2px;
+    background:$primaryColor;
+}
+.p{
+    margin: 1.5rem 0;
+    letter-spacing: 3px;  
+    color: #dfd5d5;
+}
+.button{
+    background: $primaryColor;
+    border-radius: 15px;
+    border: 0;
+    color: #f8f5f5;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    @include trans;
+    &:hover {
+        background: #fcf9f7;
+        color: $primaryColor;
+    }
+}
+// sass home ssction 
+.home{
+    position: relative;
+    background: $Home_bg;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    .home-content{
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        h2 {
+           @extend .h2
+        }
+        span {
+           @extend .span
+        }
+        p {
+            @extend .p
+        }
+        button {
+            @extend .button
+        }
+    }
+   
+}
+   
+.needs {
+    padding: 2rem 0;
+    background: #121213;
+    text-align: center;
+    h2 {
+        @extend .h2
+    }
+    span {
+        @extend .span
+    }
+    p {
+        @extend .p
+    }
+    button {
+        @extend .button
+    }
 }
