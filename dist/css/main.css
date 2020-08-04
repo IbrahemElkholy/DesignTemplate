@@ -76,10 +76,13 @@ header {
   height: 100vh;
   text-align: center; }
   .home .home-content {
+    margin-top: 2rem;
     position: absolute;
-    left: 70%;
+    left: 85%;
     top: 50%;
     transform: translate(-50%, -50%); }
+    .home .home-content button {
+      margin: 1.5rem 0; }
 
 .needs {
   padding: 2rem 0;
@@ -148,3 +151,47 @@ header {
       .contact .getin-touch .item i {
         display: block;
         color: rgba(241, 122, 24, 0.911); }
+
+@media (max-width: 786px) {
+  header {
+    position: static;
+    text-align: center; }
+    header .logo {
+      float: none;
+      width: 100%; }
+    header ul {
+      float: none;
+      width: 100%;
+      display: block; }
+  .h2, .home .home-content h2, .needs h2, .service h2, .download-content h2, .contact h2 {
+    font-size: 1.5rem; }
+  .service .item {
+    grid-template-columns: repeat(2, 1fr); }
+  .images {
+    grid-template-columns: repeat(2, 1fr); }
+  .home .home-content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); } }
+
+@media (max-width: 575px) {
+  header {
+    position: static;
+    text-align: center; }
+    header .logo {
+      float: none;
+      width: 100%; }
+    header ul {
+      float: none;
+      width: 100%;
+      display: block; }
+  .h2, .home .home-content h2, .needs h2, .service h2, .download-content h2, .contact h2 {
+    font-size: 1.5rem; }
+  .service .item {
+    grid-template-columns: 1fr; }
+  .images {
+    grid-template-columns: 1fr; }
+  .home .home-content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); } }

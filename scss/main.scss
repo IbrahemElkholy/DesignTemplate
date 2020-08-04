@@ -7,6 +7,8 @@ $Home_bg:url("../img/home.jpg");
 @mixin trans {
     transition: all 0.5s ease-in-out;
 }
+
+
 *{
     margin: 0;
     padding: 0;
@@ -63,7 +65,7 @@ header{
 }
 .h2{
     font-size: 2rem;
-           color: #fcf9f7;
+    color: #fcf9f7;
 }
 .span{
     display: block;
@@ -96,11 +98,13 @@ header{
     position: relative;
     background: $Home_bg;
     background-size: cover;
+    
     height: 100vh;
     text-align: center;
     .home-content{
+        margin-top: 2rem;
         position: absolute;
-        left: 70%;
+        left: 85%;
         top: 50%;
         transform: translate(-50%,-50%);
         h2 {
@@ -113,7 +117,8 @@ header{
             @extend .p
         }
         button {
-            @extend .button
+            @extend .button;
+            margin: 1.5rem 0;
         }
     }
    
@@ -232,3 +237,87 @@ header{
         }
     }
 }
+// media query
+
+@media (max-width:786px){
+    header{
+        position: static;
+        text-align: center;
+        .logo{
+            float: none;
+            width: 100%;
+        }
+        ul {
+            float: none;
+            width: 100%;
+            display: block;
+        }
+    }
+    .h2{
+        font-size: 1.5rem;
+    }
+    .service {
+        .item {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .images{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .home{
+        .home-content{
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+@media (max-width:575px){
+        header{
+            position: static;
+            text-align: center;
+            .logo{
+                float: none;
+                width: 100%;
+            }
+            ul {
+                float: none;
+                width: 100%;
+                display: block;
+            }
+        }
+        .h2{
+            font-size: 1.5rem;
+        }
+        .service {
+            .item {
+                grid-template-columns:1fr;
+            }
+        }
+        .images{
+            grid-template-columns: 1fr;
+        }
+        .home{
+            .home-content{
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        
+}
+
+
+
+    
+
+
+
+    @media (min-width:787px)and(max-width:1170px){
+
+    }
+
+
+    @media (min-width:1171px) {
+
+    }
